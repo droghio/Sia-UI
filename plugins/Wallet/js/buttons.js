@@ -8,11 +8,11 @@ const loaders = require('./js/loaders');
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Capsule ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Make sure the user read the password
 $('#confirm-password').click(function() {
-	// Save password if checked
-	var pw = $('#generated-password').text();
-	if ($(this).siblings('.save-password').get(0).checked) {
-		popups.savePassword(pw);
-	}
+	// Save password if checked (Temporarily disabled)
+	// var pw = $('#generated-password').text();
+	// if ($(this).siblings('.save-password').get(0).checked) {
+	// 	popups.savePassword(pw);
+	// }
 
 	// Hide popup and start the plugin
 	unlock(pw);

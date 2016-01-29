@@ -17,9 +17,11 @@ function passwordPopup(callback) {
 					<i class='fa fa-times'></i>
 				</div>
 			</div>
+			<!-- Temporarily disabled
 			<input type='checkbox' class='save-password'>Save password <br/>
 			<div class='hidden warning s-font'>Warning: This is equivalent to having an
 				unencrypted wallet and poses a security risk!</div>
+			-->
 			<input type='password' placeholder='Wallet password'>
 			<div class='button enter'>
 				<i class='fa fa-check-circle'></i>
@@ -52,11 +54,11 @@ function passwordPopup(callback) {
 
 	// Entering the password calls the callback with it
 	el.find('.enter').click(function() {
-		// Save password if checked
-		var pw = el.find('input:password').val();
-		if (el.find('.save-password').get(0).checked) {
-			savePassword(pw);
-		}
+		// Save password if checked (Temporarily disabled)
+		// var pw = el.find('input:password').val();
+		// if (el.find('.save-password').get(0).checked) {
+		// 	savePassword(pw);
+		// }
 	
 		// Destroy popup and call the callback
 		callback(pw);

@@ -93,7 +93,7 @@ function* calculateStorageCostSaga(action) {
 		const cost = sizeTB.times(scPerTBPerMo).round(2).toString()
 		yield put(actions.setStorageCost(cost))
 	} catch (e) {
-		sendError(e)
+		yield put(actions.setStorageCost(''))
 	}
 }
 
